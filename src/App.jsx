@@ -18,10 +18,10 @@ export default function App() {
 
     return (
         <main className="flex mx-auto justify-center">
-            <div className="w-80 border-b border-x border-highlight p-4 flex flex-col gap-2">
+            <div className="flex-none w-max border-b border-x border-highlight p-4 flex flex-col gap-2">
                 {testMessages()}
             </div>
-            <div className={`${messageOpen ? "w-full border-b border-r" : "w-0 border-0"} h-max duration-100 truncate border-highlight`}>
+            <div className={`flex-none ${messageOpen ? "w-max border-b border-r p-4 " : "w-0 border-0"}h-max duration-100 truncate border-highlight`}>
                 <button onClick={() => setMessageOpen(false)} title="Close Message" className="w-10 h-10 bg-highlight text-background">{'<'}</button>
                 <h2>Message Title</h2>
                 <p>Message Text</p>
