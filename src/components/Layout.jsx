@@ -14,11 +14,11 @@ export default function Layout({ children }) {
                         <InputButton title={"Your Outgoing Messages"}>Sent</InputButton>
                     </div>
                 </div>
-                <button onClick={() => setShowOptions(!showOptions)} className={`absolute top-0 right-0 px-3 text-3xl duration-75 ${showOptions ? "mr-28" : "mr-0"}`}>&equiv;</button>
+                <button onClick={() => setShowOptions(!showOptions)} className="absolute top-0 right-0 px-3 text-3xl duration-75">&equiv;</button>
             </header>
             <div className="flex flex-row-reverse overflow-x-hidden">
-                <nav className={`right-0 ${showOptions ? "w-28" : "w-0"} truncate flex-none duration-75`}>
-                    <ul className="fixed">
+                <nav className={`${showOptions ? "w-36 border-l border-b p-2" : "w-0"} h-max truncate flex-none duration-75 text-background border-highlight`}>
+                    <ul className="flex flex-col gap-1 [&>*]:bg-highlight">
                         <li>Change User</li>
                         <li>Enter Sandbox</li>
                     </ul>
